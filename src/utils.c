@@ -20,11 +20,12 @@ char *my_strrev(char *str)
     return (str);
 }
 
-char *my_itoa(int nb)
+char *my_itoa(unsigned long int nb)
 {
-    int nb_size = 1, nb_div = 1;
+    int nb_size = 1;
+    unsigned long int nb_div = 1;
 
-    for (int temp = nb; temp >= 10; temp = temp / 10)
+    for (unsigned long int temp = nb; temp >= 10; temp = temp / 10)
         nb_size += 1;
     char *str = malloc(sizeof(char) * nb_size + 1);
     str[nb_size] = '\0';
