@@ -6,6 +6,7 @@
 */
 
 #include "palindrome.h"
+#include <math.h>
 
 int main(int argc, char **argv)
 {
@@ -13,12 +14,10 @@ int main(int argc, char **argv)
 
     data = init_data();
     ini_flag(data, argc, argv);
-    printf("number=%d\n", data->flags.number);
-    printf("base=%d\n", data->flags.base);
-    printf("imin=%d\n", data->flags.imin);
-    printf("imax=%d\n", data->flags.imax);
-    printf("p=%d\n", data->flags.p);
-    printf("n=%d\n", data->flags.n);
-    printf("h=%d\n", data->flags.h);
+    if (data->flags.base < 2 || data->flags.base > 10) {
+       data->flags.base = 10;
+    }
+    data->number = data->flags.number;
+    palindrome(data);
     return (0);
 }

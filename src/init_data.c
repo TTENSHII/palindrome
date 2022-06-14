@@ -15,5 +15,6 @@ data_t *init_data(void)
     data->flags.number = 0;
     data->flags.p = false;
     data->flags.h = false;
+    data->iterations = 1;
     return (data);
 }

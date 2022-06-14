@@ -9,14 +9,16 @@ NAME = palindrome
 
 SRC = src/main.c\
 	src/init_data.c\
-	src/init_flags.c
+	src/init_flags.c\
+	src/utils.c\
+	src/palindrome.c
 
 OBJ = $(SRC:.c=.o)
 
 CFLAGS += -Iincludes/
 
 all : $(OBJ)
-	gcc -o $(NAME) $(OBJ) $(CFLAGS)
+	gcc -o $(NAME) $(OBJ) $(CFLAGS) -lm
 	rm -f $(OBJ)
 
 clean:
