@@ -7,7 +7,9 @@
 
 NAME = palindrome
 
-SRC = src/main.c
+SRC = src/main.c\
+	src/init_data.c\
+	src/init_flags.c
 
 OBJ = $(SRC:.c=.o)
 
