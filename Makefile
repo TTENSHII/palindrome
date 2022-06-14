@@ -1,16 +1,10 @@
-##
-## EPITECH PROJECT, 2022
-## palindrome
-## File description:
-## Makefile
-##
-
 NAME = palindrome
 
 SRC = src/main.c\
-	src/init_data.c\
-	src/init_flags.c\
+	src/init_struct.c\
+	src/init_options.c\
 	src/utils.c\
+	src/error_handler.c\
 	src/palindrome.c
 
 OBJ = $(SRC:.c=.o)
