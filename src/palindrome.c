@@ -37,6 +37,7 @@ void p_option(data_t *data)
         number = i;
         data->iterations = 0;
         while (data->iterations <= data->flags.imax) {
+            number = convert_number_base(number, 10, data->flags.base);
             str = my_itoa(number);
             if (strcmp(str, to_compare) == 0 && data->iterations >= data->flags.imin) {
                 printf("%d leads to %d in %d interation(s) in base %d\n", i, data->flags.number, data->iterations, data->flags.base);
@@ -48,9 +49,10 @@ void p_option(data_t *data)
             number = atoi(str);
             number_rev = atoi(reversed_str);
 
+            number = convert_number_base(number, data->flags.base, 10);
+            number_rev = convert_number_base(number_rev, data->flags.base, 10);
             number = number + number_rev;
 
-            str = my_itoa(number);
             data->iterations++;
         }
     }
