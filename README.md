@@ -1,6 +1,6 @@
 <h1 align="center">◦•● Palindrome ●•◦</h1>
 
-## Project :bookmark_tabs:
+## PROJECT :bookmark_tabs:
 
 - Find palindromes
 - Manage different palindromes options
