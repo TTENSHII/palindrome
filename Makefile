@@ -15,7 +15,6 @@ CFLAGS = -Iincludes/ -Wall -Wextra -Werror
 
 all : $(OBJ)
 	gcc -o $(NAME) $(OBJ) $(CFLAGS) -lm
-	rm -f $(OBJ)
 
 clean:
 	rm -f $(OBJ)
