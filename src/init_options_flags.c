@@ -1,7 +1,7 @@
 #include <getopt.h>
 #include "palindrome.h"
 
-static void check_options(data_t *data, int option, char **argv)
+static void check_options(data_t *data, int option)
 {
     if (option == 'n') {
         data->n_flag = true;
@@ -13,7 +13,7 @@ static void check_options(data_t *data, int option, char **argv)
     }
 }
 
-static void check_flag(data_t *data, int option, char **argv)
+static void check_flag(data_t *data, int option)
 {
     if (option == 'h')
         data->h_flag = true;
@@ -23,11 +23,13 @@ static void check_flag(data_t *data, int option, char **argv)
         data->imax = atoi(optarg);
     if (option == 'b')
         data->base = atoi(optarg);
-    if (option == '?')
+    if (option == '?') {
+        free_data(data);
         exit(84);
+    }
 }
 
-void init_options(data_t *data, int argc, char **argv)
+void init_options_and_flags(data_t *data, int argc, char **argv)
 {
     int option = 0;
     char short_opts[] = "p:n:b:h";
@@ -39,7 +41,7 @@ void init_options(data_t *data, int argc, char **argv)
 
     while ((option = getopt_long_only(argc,\
     argv, short_opts, long_options, NULL)) != - 1) {
-        check_options(data, option, argv);
-        check_flag(data, option, argv);
+        check_options(data, option);
+        check_flag(data, option);
     }
 }

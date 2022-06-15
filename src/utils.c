@@ -21,7 +21,6 @@ int convert_number_base(int number, int from_base, int to_base)
 char *my_strrev(char *str)
 {
     char temp = '\0';
-    int index_temp = 0;
     int len = strlen(str);
 
     if (str == NULL)
@@ -38,7 +37,6 @@ char *my_strrev(char *str)
 char *my_itoa(int nb)
 {
     int nb_size = 1;
-    int nb_div = 1;
 
     for (int temp = nb; temp >= 10; temp = temp / 10)
         nb_size += 1;

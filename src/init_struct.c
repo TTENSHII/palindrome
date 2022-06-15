@@ -13,5 +13,9 @@ data_t *init_data(void)
     data->n_flag = false;
     data->number = 0;
     data->p_flag = false;
+    data->str = NULL;
+    data->reversed_str = NULL;
+    data->iterations = 0;
+    data->number_rev = 0;
     return (data);
 }
