@@ -1,7 +1,21 @@
-#include <stddef.h>
-#include <string.h>
-#include <stdlib.h>
-#include <math.h>
+#include "palindrome.h"
+
+void display_help(char *executable, data_t *data)
+{
+    printf("USAGE\n\t%s  -n number -p palindrome ", executable);
+    printf("[-b base] [-imin i] [-imax i]\n");
+    printf("\nDESCRIPTION\n");
+    printf("\t-n n\tinteger to be transformed (>=0)\n");
+    printf("\t-p pal\tpalindromic number to be obtained");
+    printf(" (incompatible with the -n option) (>=0)\n");
+    printf("if defined, all fitting values of n will be output\n");
+    printf("\t-b base\tbase in which the procedure will be\n");
+    printf("\texecuted (1<b<=10) [def: 10]\n");
+    printf("\t-imin i\tminimum number of iterations, (>=0) [def: 0]\n");
+    printf("\t-imax i\tmaximum number of iterations,, (>=0) [def: 100]\n");
+    free_data(data);
+    exit(0);
+}
 
 int convert_number_base(int number, int from_base, int to_base)
 {

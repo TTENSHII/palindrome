@@ -30,14 +30,15 @@ typedef struct data_s {
 
 //-------INITIALISATION-------//
 data_t *init_data(void);
-void init_options_and_flags(data_t *data, int argc, char **argv);
 void error_handler(data_t *data, int argc, char **argv);
+void init_options_and_flags(data_t *data, int argc, char **argv);
 
 //--------UTILS--------------//
-int convert_number_base(int number, int from_base, int to_base);
-char *my_strrev(char *str);
 char *my_itoa(int nb);
+char *my_strrev(char *str);
 void free_data(data_t *data);
+void display_help(char *executable, data_t *data);
+int convert_number_base(int number, int from_base, int to_base);
 
 //--------PALINDROME--------//
 void palindrome_n_option(data_t *data, int save_nbr);
