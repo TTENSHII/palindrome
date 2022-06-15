@@ -6,7 +6,7 @@
 - Manage different palindromes options
 - Manage different bases (2 - 10)
 
-## DETAILS :city_sunset:
+## DETAILS 🌟
 
 A palindrome is a word or a number which reads the same backward or forward.
 
@@ -15,9 +15,19 @@ To find a palindrome, we can use this procedure:
 -Sum the two numbers
 -Check if it is a palindrome
 
-## EXEMPLE :flag:
+## EXEMPLE 🎏
 
 <div align="left">
-  <img src="...">
-  <img src="...">
+  -Help flag <br>
+  <img src="https://github.com/TTENSHII/palindrome/blob/main/assets/help.png">
+</div>
+
+<div align="left">
+  <br>-n option <br>
+  <img src="https://github.com/TTENSHII/palindrome/blob/main/assets/n_option.png">
+</div>
+
+<div align="left">
+  <br>-p option <br>
+  <img src="https://github.com/TTENSHII/palindrome/blob/main/assets/p_option.png">
 </div>
