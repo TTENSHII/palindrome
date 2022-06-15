@@ -4,7 +4,7 @@ static void print_result(data_t *data, int save_nbr, int *found, char *compare_n
 {
     if (strcmp(data->str, compare_nb) == 0 && data->iterations >= data->imin) {
         printf("%d leads to %d ", index, save_nbr);
-        printf("in %d interation(s) in base %d\n", data->iterations, data->base);
+        printf("in %d iteration(s) in base %d\n", data->iterations, data->base);
         *found = 1;
     }
 }
